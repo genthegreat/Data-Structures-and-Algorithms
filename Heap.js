@@ -27,7 +27,7 @@ class MaxBinaryHeap {
       this.values[0],
     ];
     let node = this.values.pop();
-    this.sinkDown();
+    if (this.values.length > 0) this.sinkDown();
     return node;
   }
 
