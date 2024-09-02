@@ -31,12 +31,12 @@ class PriorityQueue {
   }
 
   dequeue() {
-    [this.values[0], this.values[this.values.length - 1]] = [
-      this.values[this.values.length - 1],
-      this.values[0],
-    ];
-    let min = this.values.pop();
-    if (this.values.length > 0) this.sinkDown();
+    let min = this.values[0];
+    let end = this.values.pop();
+      if (this.values.length > 0) {
+          this.values[0] = end
+          this.sinkDown();
+      }
     return min;
   }
 
