@@ -216,3 +216,15 @@ function sameFrequency(one, two) {
 }
 
 sameFrequency(182, 181);
+
+/*
+Divide and Conquer - countZeroes
+Given an array of 1s and 0s which has all 1s first followed by all 0s, write a function called countZeroes, which returns the number of zeroes in the array.
+*/
+function countZeroes(arr) {
+  let length = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) return length - i;
+  }
+  return 0;
+}
